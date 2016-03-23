@@ -1,10 +1,12 @@
 @echo off
-goto win7-svr08
+
+cd /D %~dp0
+
+::goto win7-svr08
 ver | FIND "5.2.3790" && goto xp-srv03
 ver | FIND "6.1.76" && goto win7-svr08
 echo "Could not determine windows version" & goto end
 
-cd /D %~dp0
 
 ::###################################################
 :xp-srv03
